@@ -1,24 +1,27 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// import { Component } from '@angular/core';
+// import { CompressionService } from '../../services/compression.service';
 
-@Component({
-  selector: 'app-compression',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './compression.component.html'
-})
-export class CompressionComponent {
-  preview: string | null = null;
+// @Component({
+//   selector: 'app-compress',
+//   standalone: true,
+//   templateUrl: './compression.component.html',
+// })
+// export class CompressComponent {
 
-  // Fonction pour l'upload
-  onFileSelected(event: Event) {
-    const file = (event.target as HTMLInputElement).files?.[0]; // récupère le fichier
-    if (!file) return;
+//   constructor(private compressionService: CompressionService) {}
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      this.preview = reader.result as string; // stocke l'image sous forme de DataURL
-    };
-    reader.readAsDataURL(file);
-  }
-}
+//   onCompress(fileInput: HTMLInputElement) {
+//   const file = fileInput.files?.[0];
+
+//   if (!file) {
+//     return;
+//   }
+
+//   this.compressionService
+//     .compressPreview(file, 60, 800)
+//     .subscribe(result => {
+//       console.log(result);
+//     });
+// }
+
+// }

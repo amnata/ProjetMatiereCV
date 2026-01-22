@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CompressionService } from './compression.service';
+import { CompressionService } from '../services/compression.service';
 
 describe('CompressionService', () => {
   let service: CompressionService;

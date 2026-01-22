@@ -1,9 +1,5 @@
-<h2>Compression d'image</h2>
+<input type="file" #fileInput />
 
-<input type="file" accept="image/*" (change)="onFileSelected($event)">
-
-<!-- Affichage de l'image uploadée -->
-<div *ngIf="preview" style="margin-top:20px;">
-  <h3>Aperçu :</h3>
-  <img [src]="preview" alt="Aperçu de l'image" style="max-width:400px; border:1px solid #ccc; border-radius:8px;">
-</div>
+<button (click)="onCompress(fileInput)">
+  <i class="fas fa-cloud-upload-alt"></i> Compresser
+</button>
